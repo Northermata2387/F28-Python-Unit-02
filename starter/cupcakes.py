@@ -99,7 +99,7 @@ def add_cupcake(file, cupcakes):
                                 "flavor": cupcake.flavor, "frosting": cupcake.frosting, "sprinkles": cupcake.sprinkles})
 
 
-add_cupcake("sample.csv", cupcake_list)
+# add_cupcake("sample.csv", cupcake_list)
 # Un-note the above line to write an entirely new list to the sample.csv file
 
 
