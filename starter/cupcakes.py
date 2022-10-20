@@ -64,12 +64,6 @@ class Large(Cupcake):
         return quantity * self.price
 
 
-# Instance of a mini cupcake with print functions to confirm creation
-my_cupcake_mini = Mini("Chocolate", 1.99, "Mixed Chocolate", "Ganache")
-print(my_cupcake_mini.name)
-print(my_cupcake_mini.price)
-print(my_cupcake_mini.size)
-
 # Cupcake instances
 cupcake1 = Regular("Apple Pie", 3.39,
                    "cinnamon-apple", "cinnamon buttercream", "fresh apple filling")
@@ -85,6 +79,29 @@ cupcake_list = [
     cupcake2,
     cupcake3
 ]
+
+
+# Function to append the sample.csv file and add new instances to the list
+
+
+def add_cupcake(file, cupcakes):
+    with open(file, "a", newline="\n") as csvfile:
+        fieldnames = ["size", "name", "price", "flavor",
+                      "frosting", "sprinkles", "filling"]
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+        for cupcake in cupcakes:
+            if hasattr(cupcake, "filling"):
+                writer.writerow({"size": cupcake.size, "name": cupcake.name, "price": cupcake.price, "flavor": cupcake.flavor,
+                                "frosting": cupcake.frosting, "filling": cupcake.filling, "sprinkles": cupcake.sprinkles})
+            else:
+                writer.writerow({"size": cupcake.size, "name": cupcake.name, "price": cupcake.price,
+                                "flavor": cupcake.flavor, "frosting": cupcake.frosting, "sprinkles": cupcake.sprinkles})
+
+
+add_cupcake("sample.csv", cupcake_list)
+# Un-note the above line to write an entirely new list to the sample.csv file
+
 
 # Function to write over the sample.csv file and create a new list based on the instances above
 
@@ -109,24 +126,6 @@ def write_new_csv(file, cupcakes):
 # write_new_csv("sample.csv", cupcake_list)
 # Un-note the above line to write an entirely new list to the sample.csv file
 
-
-# Function to append the sample.csv file and add new instances to the list
-def add_cupcake(file, cupcake):
-    with open(file, "a", newline="\n") as csvfile:
-        fieldnames = ["size", "name", "price", "flavor",
-                      "frosting", "sprinkles", "filling"]
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-
-        if hasattr(cupcake, "filling"):
-            writer.writerow({"size": cupcake.size, "name": cupcake.name, "price": cupcake.price, "flavor": cupcake.flavor,
-                            "frosting": cupcake.frosting, "filling": cupcake.filling, "sprinkles": cupcake.sprinkles})
-        else:
-            writer.writerow({"size": cupcake.size, "name": cupcake.name, "price": cupcake.price,
-                            "flavor": cupcake.flavor, "frosting": cupcake.frosting, "sprinkles": cupcake.sprinkles})
-
-
-add_cupcake("sample.csv", cupcake_list)
-# Un-note the above line to write an entirely new list to the sample.csv file
 
 # Function to read the csv files
 
