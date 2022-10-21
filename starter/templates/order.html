@@ -9,11 +9,18 @@
   </head>
   <body>
     <header>
-      <h1>Order</h1>
+      <a href="{{ url_for('home') }}">
+        <h1>Cake It Easy!</h1>
+        <h3>Artisinal Cupcakes</h3>
+      </a>
+      <div class="cart">
+        <a href="{{ url_for('order') }}">
+          <h7>{{ items_num }} in Cart</h7>
+          <h7>${{ order_total }}</h7>
+        </a>
+      </div>
     </header>
     <main>
-      <a href="{{ url_for('home') }}"><h6>home</h6></a>
-
       <h2>Order Items</h2>
       <table class="" id="cupcake-order">
         <th>

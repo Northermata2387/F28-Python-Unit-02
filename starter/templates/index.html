@@ -9,13 +9,16 @@
 </head>
 <body>
     <header>
-        <h1 class="title">Welcome to Cake It Easy!</h1>
-        <div class="cart">
-          <a href="{{ url_for('order') }}">
-              <h7>{{ items_num }} in Cart</h7>
-              <h7>${{ order_total }}</h7>
-          </a>
-        </div>
+      <a href="{{ url_for('home') }}">
+        <h1>Cake It Easy!</h1>
+        <h3>Artisinal Cupcakes</h3>
+      </a>
+      <div class="cart">
+        <a href="{{ url_for('order') }}">
+          <h7>{{ items_num }} in Cart</h7>
+          <h7>${{ order_total }}</h7>
+        </a>
+      </div>
     </header>
     <main>
         <div class="">

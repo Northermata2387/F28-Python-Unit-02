@@ -8,28 +8,54 @@
 
 body {
     background-color: #EDE3E9;
-    color: #9F84BD;
+    color: #875BBA;
     text-shadow: 2px 2px 4px #EBC3DB;
 }
 
 header {
+    background-color: #EDE3E9;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
     height: 10rem;
     width: 100vw;
-    padding-top: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 5px #C09BD8;
+    padding-left: 40rem;
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.cart {
+    position: fixed;
+    right: 7rem;
+    font-size: 1.3rem;
+}
+
+.indv-cake-desc {
+    margin-top: 13rem;
+}
+
+main {
+    margin-top: 12rem;
 }
 
 a:link {
     text-decoration: none;
-    color: #9F84BD;
+    color: #875BBA;
 }
 
 a:visited {
     text-decoration: none;
-    color: #9F84BD;
+    color: #875BBA;
 }
 
 a:hover {
