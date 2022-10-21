@@ -127,6 +127,13 @@ def write_new_csv(file, cupcakes):
 # Un-note the above line to write an entirely new list to the sample.csv file
 
 
+# Function to add the cupcake dictionaries to file
+def get_cupcakes(file):
+    with open(file) as csvfile:
+        reader = csv.DictReader(csvfile)
+        reader = list(reader)
+        return reader
+
 # Function to read the csv files
 
 
