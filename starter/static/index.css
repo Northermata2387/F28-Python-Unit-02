@@ -5,3 +5,34 @@
 #EDE3E9 - Lavendar Blush
 #E6E4CE - Eggshell
 */
+
+body {
+    background-color: #EDE3E9;
+    color: #9F84BD;
+    text-shadow: 2px 2px 4px #EBC3DB;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 10rem;
+    width: 100vw;
+    padding-top: 5rem;
+}
+
+a:link {
+    text-decoration: none;
+    color: #9F84BD;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #9F84BD;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #6D26BD;
+}

@@ -1,5 +1,3 @@
 size,name,price,flavor,frosting,sprinkles,filling
 regular,Apple Pie,3.39,cinnamon-apple cake,cinnamon buttercream,"['Red', 'White', 'Chocolate']",fresh apple filling
-mini,Country Cherry Cheesecake,2.39,graham cracker,vanilla buttercream,['country cherry jam'],
-large,Lemon Drop,5.39,lemon cake,lemon buttercream,[],fresh lemon curd
-mini,Country Cherry Cheesecake,2.39,graham cracker,vanilla buttercream,['country cherry jam'],
+regular,Apple Pie,3.39,cinnamon-apple cake,cinnamon buttercream,"['Red', 'White', 'Chocolate']",fresh apple filling

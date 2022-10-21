@@ -8,13 +8,12 @@
     <title>Cake-It-Easy ~ {{ cupcake["name"] }}</title>
   </head>
   <body>
-    <header>
+    <header class="title">
       <h1>{{ cupcake["name"] }}</h1>
     </header>
     <main>
       <a href="{{ url_for('home') }}"><h6>home</h6></a>
-
-      <div class="cupcake-container">
+      <div class="">
         <a href="{{ url_for('individual_cupcake', name=cupcake['name']) }}">
           <h3>{{ cupcake["name"] }}</h3>
         </a>
