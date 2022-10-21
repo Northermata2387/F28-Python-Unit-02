@@ -39,7 +39,7 @@ class Regular(Cupcake):
         return quantity * self.price
 
 
-# Child Class defining initiates and fields for a mini cupcake with required abstract from parent class
+# Child Class defining initiates and altered fields for a mini cupcake with required abstract from parent class
 
 
 class Mini(Cupcake):
@@ -64,8 +64,8 @@ class Large(Cupcake):
         return quantity * self.price
 
 
-# Cupcake instances
-cupcake1 = Regular("Apple Pie", 3.39,
+# Cupcake instances to verify functionality of add_cupcake and write_new_csv functions
+cupcake1 = Regular("Apple Pies", 3.39,
                    "cinnamon-apple", "cinnamon buttercream", "fresh apple filling")
 cupcake1.add_sprinkles("Red", "White", "Chocolate")
 cupcake2 = Mini("Country Cherry Cheesecake", 2.39,
@@ -82,7 +82,6 @@ cupcake_list = [
 
 
 # Function to append the sample.csv file and add new instances to the list
-
 
 def add_cupcake(file, cupcakes):
     with open(file, "a", newline="\n") as csvfile:
@@ -123,16 +122,36 @@ def write_new_csv(file, cupcakes):
                                 "flavor": cupcake.flavor, "frosting": cupcake.frosting, "sprinkles": cupcake.sprinkles})
 
 
-# write_new_csv("sample.csv", cupcake_list)
+# write_new_csv("orders.csv", cupcake_list)
 # Un-note the above line to write an entirely new list to the sample.csv file
 
 
-# Function to add the cupcake dictionaries to file
+# Function to add the cupcakes dictionaries to file
 def get_cupcakes(file):
     with open(file) as csvfile:
         reader = csv.DictReader(csvfile)
         reader = list(reader)
         return reader
+
+# Function to return a cupcake based on the name and add it to the orders.csv
+
+
+def find_cupcake(file, name):
+    for cupcake in get_cupcakes(file):
+        if cupcake["name"] == name:
+            return cupcake
+    return None
+
+# Function to append a cupcake to a specified csv file
+
+
+def add_cupcake_dictionary(file, cupcake):
+    with open(file, "a", newline="\n") as csvfile:
+        fieldnames = ["size", "name", "price", "flavor",
+                      "frosting", "sprinkles", "filling"]
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writerow(cupcake)
+
 
 # Function to read the csv files
 

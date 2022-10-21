@@ -1,36 +1,60 @@
-# importing the get_cupcakes function
-from cupcakes import get_cupcakes
+# Importing mulitple functions
+from cupcakes import get_cupcakes, find_cupcake, add_cupcake_dictionary
 
-# Importing Flask to render a tamplate from library
-from flask import Flask, render_template
+# Importing Flask to render a tamplate, url_for, and redirect from library options
+from flask import Flask, render_template, url_for, redirect
+
 app = Flask(__name__)
 
 
 # Main home page @ http://localhost:8000
 @app.route("/")
 def home():
-    return render_template("index.html", cupcakes=get_cupcakes("cupcakes.csv"))
+    cupcakes = get_cupcakes("cupcakes.csv")
+    order = get_cupcakes("orders.csv")
+    order_total = round(sum([float(x["price"]) for x in order]), 2)
+    return render_template("index.html", cupcakes=cupcakes, items_num=len(order), order_total=order_total)
 
-# All cupcakes page @ http://localhost:8000/cupcakes
-
-
-@app.route("/cupcakes")
-def all_cupcakes():
-    return render_template("cupcakes.html")
-
-# individual cupcakes page @ http://localhost:8000/cupcakes/cupcake_individual
+# Endpoint to allow a cupcake to be added to the orders.csv
 
 
-@app.route("/cupcake_individual")
-def individual_cupcake():
-    return render_template("individual-cupcakes.html")
+@ app.route("/add-cupcake/<name>")
+def add_cupcake(name):
+    cupcake = find_cupcake("cupcakes.csv", name)
 
-# Cart page @ http://localhost:8000/cupcakes/order
+    if cupcake:
+        add_cupcake_dictionary("orders.csv", cupcake)
+        return redirect(url_for("home"))
+    else:
+        return "Sorry cupcake not found."
+
+# individual cupcakes page @ http://localhost:8000/cupcake_individual
+
+
+@app.route("/individual-cupcake/<name>")
+def individual_cupcake(name):
+    cupcake = find_cupcake("cupcakes.csv", name)
+
+    if cupcake:
+        return render_template("individual-cupcake.html", cupcake=cupcake)
+    else:
+        return "Sorry cupcake not found."
+
+# Cart page @ http://localhost:8000/order
 
 
 @app.route("/order")
 def order():
-    return render_template("order.html")
+    cupcakes = get_cupcakes("orders.csv")
+
+    cupcakes_counted = []
+    cupcake_set = set()
+
+    for cupcake in cupcakes:
+        cupcake_set.add(
+            (cupcake["name"], cupcake["price"], cupcakes.count(cupcake)))
+
+    return render_template("order.html", cupcakes=cupcake_set)
 
 
 # Execute code when file runs as Script and application runner
