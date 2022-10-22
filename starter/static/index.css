@@ -1,19 +1,12 @@
-/* Color options
-#9F84BD - Purple Mountain Majesty
-#C09BD8 - Wisteria
-#EBC3DB - Cameo Pink
-#EDE3E9 - Lavendar Blush
-#E6E4CE - Eggshell
-*/
-
 body {
     background-color: #EDE3E9;
-    color: #875BBA;
-    text-shadow: 2px 2px 4px #EBC3DB;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: hsl(208, 100%, 97%);
+    text-shadow: 2px 2px 4px hsl(268, 41%, 54%);
 }
 
 header {
-    background-color: #EDE3E9;
+    background-color: #EBC3DB;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -22,7 +15,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    box-shadow: 0 5px 5px #C09BD8;
+    box-shadow: 0 5px 5px hsl(324, 50%, 83%);
     padding-left: 40rem;
     text-align: center;
 }
@@ -40,6 +33,36 @@ header {
     font-size: 1.3rem;
 }
 
+.all-product-boxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90rem;
+}
+
+.home-page-product-box {
+    background-color: #EBC3DB;
+    border: 2px hsl(324, 50%, 83%) solid;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px hsl(324, 50%, 83%);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 4.5rem;
+    padding: 1rem;
+    width: 15rem;
+}
+
+.indv-product-box {
+    background-color: #EBC3DB;
+    border: 2px hsl(324, 50%, 83%) solid;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px hsl(324, 50%, 83%);
+    margin-top: 13rem;
+    padding: 1rem;
+    width: 15rem;
+    margin-left: 37rem;
+}
+
 .indv-cake-desc {
     margin-top: 13rem;
 }
@@ -50,15 +73,42 @@ main {
 
 a:link {
     text-decoration: none;
-    color: #875BBA;
+    color: hsl(208, 100%, 97%);
 }
 
 a:visited {
     text-decoration: none;
-    color: #875BBA;
+    color: hsl(208, 100%, 97%);
 }
 
 a:hover {
     text-decoration: none;
-    color: #6D26BD;
+    color: hsl(208, 100%, 117%);
+    text-shadow: 2px 2px 4px hsl(269, 63%, 34%);
+}
+
+button {
+    font-size: 1rem;
+    background-color: hsl(269, 63%, 74%);
+    text-decoration: none;
+    color: hsl(208, 100%, 97%);
+    border: 2px hsl(324, 50%, 83%) solid;
+    border-radius: 15px;
+    padding: 0.3rem 0.3rem;
+}
+
+.order-table {
+    background-color: #EBC3DB;
+    border: 2px hsl(324, 50%, 83%) solid;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px hsl(324, 50%, 83%);
+    margin-left: 22rem;
+    padding: 2rem;
+    font-size: 1.3rem;
+    width: 50rem;
+    text-align: left;
+}
+
+td {
+    padding: 0;
 }

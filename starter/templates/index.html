@@ -21,9 +21,9 @@
       </div>
     </header>
     <main>
-        <div class="">
+        <div class="all-product-boxes">
             {% for cupcake in cupcakes %}
-                <div class="">
+                <div class="home-page-product-box">
                     <a href="{{ url_for('individual_cupcake', name=cupcake['name']) }}">
                         <h3>{{ cupcake["name"] }}</h3>
                     </a>

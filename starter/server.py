@@ -35,10 +35,14 @@ def add_cupcake(name):
 def individual_cupcake(name):
     cupcake = find_cupcake("cupcakes.csv", name)
 
+    order = get_cupcakes("orders.csv")
+    order_total = round(sum([float(x["price"]) for x in order]), 2)
+
     if cupcake:
-        return render_template("individual-cupcake.html", cupcake=cupcake)
+        return render_template("individual-cupcake.html", cupcake=cupcake, items_num=len(order), order_total=order_total)
     else:
         return "Sorry cupcake not found."
+
 
 # Cart page @ http://localhost:8000/order
 
@@ -50,11 +54,14 @@ def order():
     cupcakes_counted = []
     cupcake_set = set()
 
+    order = get_cupcakes("orders.csv")
+    order_total = round(sum([float(x["price"]) for x in order]), 2)
+
     for cupcake in cupcakes:
         cupcake_set.add(
             (cupcake["name"], cupcake["price"], cupcakes.count(cupcake)))
 
-    return render_template("order.html", cupcakes=cupcake_set)
+    return render_template("order.html", cupcakes=cupcake_set, items_num=len(order), order_total=order_total)
 
 
 # Execute code when file runs as Script and application runner

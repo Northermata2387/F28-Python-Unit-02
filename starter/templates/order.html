@@ -21,8 +21,7 @@
       </div>
     </header>
     <main>
-      <h2>Order Items</h2>
-      <table class="" id="cupcake-order">
+      <table class="order-table">
         <th>
           <h5>Cupcake</h5>
         </th>
@@ -31,6 +30,9 @@
         </th>
         <th>
           <h5>Quantity</h5>
+        </th>
+        <th>
+          <h5>Remove</h5>
         </th>
         {% for cupcake in cupcakes %}
         <tr>
@@ -42,6 +44,9 @@
           </td>
           <td>
             <h6>Qty: {{ cupcake[2] }}</h6>
+          </td>
+          <td>
+            <h6>(input remove)</h6>
           </td>
         </tr>
         {% endfor %}
