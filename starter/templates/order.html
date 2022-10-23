@@ -8,7 +8,10 @@
     <title>Cake-It-Easy ~ Order Total</title>
   </head>
   <body>
-    <header>
+    <header class="header-bar">
+      <a href="{{ url_for('home') }}">
+        <img class="logo-img" src="../static/images/basic-logo.png" alt="" />
+      </a>
       <a href="{{ url_for('home') }}">
         <h1>Cake It Easy!</h1>
         <h3>Artisinal Cupcakes</h3>
@@ -21,32 +24,36 @@
       </div>
     </header>
     <main>
+      <div class="indv-cake-sub-text">
+        <h3>Your Cupcake Order Details!</h3>
+        <br />
+      </div>
       <table class="order-table">
         <th>
-          <h5>Cupcake</h5>
+          <h5 class="table-column-names">Name of Cupcake</h5>
         </th>
         <th>
-          <h5>Price</h5>
+          <h5 class="table-column-names">Size</h5>
         </th>
         <th>
-          <h5>Quantity</h5>
+          <h5 class="table-column-names">Price</h5>
         </th>
         <th>
-          <h5>Remove</h5>
+          <h5 class="table-column-names">Quantity</h5>
         </th>
         {% for cupcake in cupcakes %}
         <tr>
           <td>
-            <h6>{{ cupcake[0] }}</h6>
+            <h5>{{ cupcake[0] }}</h5>
           </td>
           <td>
-            <h6>Price: {{ cupcake[1] }}</h6>
+            <h5>{{ cupcake[1] }}</h5>
           </td>
           <td>
-            <h6>Qty: {{ cupcake[2] }}</h6>
+            <h5>$ {{ cupcake[2] }}</h5>
           </td>
-          <td>
-            <h6>(input remove)</h6>
+          <td class="quantity">
+            <h5>{{ cupcake[3] }}</h5>
           </td>
         </tr>
         {% endfor %}

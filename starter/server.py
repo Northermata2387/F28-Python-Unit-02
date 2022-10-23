@@ -59,7 +59,7 @@ def order():
 
     for cupcake in cupcakes:
         cupcake_set.add(
-            (cupcake["name"], cupcake["price"], cupcakes.count(cupcake)))
+            (cupcake["name"], cupcake["size"], cupcake["price"], cupcakes.count(cupcake)))
 
     return render_template("order.html", cupcakes=cupcake_set, items_num=len(order), order_total=order_total)
 

@@ -8,7 +8,10 @@
     <title>Cake-It-Easy ~ {{ cupcake["name"] }}</title>
   </head>
   <body>
-    <header>
+    <header class="header-bar">
+      <a href="{{ url_for('home') }}">
+        <img class="logo-img" src="../static/images/basic-logo.png" alt="" />
+      </a>
       <a href="{{ url_for('home') }}">
         <h1>Cake It Easy!</h1>
         <h3>Artisinal Cupcakes</h3>
@@ -21,15 +24,22 @@
       </div>
     </header>
     <main>
+      <div class="indv-cake-sub-text">
+        <h3>This is one of our Favorites!</h3>
+      </div>
       <div class="indv-product-box">
-        <a href="{{ url_for('individual_cupcake', name=cupcake['name']) }}">
-          <h3>{{ cupcake["name"] }}</h3>
-        </a>
-        <h4>Flavor: {{ cupcake["flavor"] }}</h4>
-        <h4>Frosting: {{ cupcake["frosting"] }}</h4>
-        <h4>Price: ${{ cupcake["price"] }}</h4>
-        <a href="{{ url_for('add_cupcake', name=cupcake['name']) }}">
-          <button>Add to Cart</button>
+        <h3 class="table-column-names">{{ cupcake["name"] }}</h3>
+        <h4 class="indv-cake-script">
+          A perfectly baked {{ cupcake["flavor"] }} with a light and fluffy {{
+          cupcake["frosting"] }}
+        </h4>
+        <a
+          class="a-ref-btn"
+          href="{{ url_for('add_cupcake', name=cupcake['name']) }}"
+        >
+          <button class="add-to-cart-btn">
+            Add for... $ {{ cupcake["price"] }}
+          </button>
         </a>
       </div>
     </main>

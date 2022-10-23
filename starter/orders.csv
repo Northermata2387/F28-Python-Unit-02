@@ -1,3 +1,5 @@
 size,name,price,flavor,frosting,sprinkles,filling
-
-large,Lemon Drop,5.39,lemon cake,lemon buttercream,[],fresh lemon curd
+Mini,Country Cherry Cheesecake,2.39,graham cracker cake,vanilla buttercream,['country cherry jam'],
+Mini,Country Cherry Cheesecake,2.39,graham cracker cake,vanilla buttercream,['country cherry jam'],
+Regular,Cookies & Cream,3.39,chocolate cake,cookies & cream buttercream,"['Onyx', 'White', 'Chocolate']",chocolate sandwich cookie
+Mini,Creme Brulee,2.39,vanilla cake,cream cheese frosting,['burnt sugar crumble'],

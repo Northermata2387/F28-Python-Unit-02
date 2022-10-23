@@ -1,12 +1,11 @@
 body {
     background-color: #EDE3E9;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: hsl(208, 100%, 97%);
-    text-shadow: 2px 2px 4px hsl(268, 41%, 54%);
 }
 
-header {
-    background-color: #EBC3DB;
+.header-bar {
+    background-color: hsl(324, 50%, 84%);
+    text-shadow: 1px 1px 1px hsl(268, 41%, 54%);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -20,6 +19,13 @@ header {
     text-align: center;
 }
 
+.logo-img {
+    position: fixed;
+    top: 1rem;
+    left: 6rem;
+    width: 8rem;
+}
+
 .title {
     display: flex;
     flex-direction: column;
@@ -31,6 +37,21 @@ header {
     position: fixed;
     right: 7rem;
     font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.header-sub-text {
+    color: hsl(268, 41%, 54%);
+    text-shadow: 1px 1px 1px hsl(324, 50%, 84%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.indv-cake-sub-text {
+    color: hsl(268, 41%, 54%);
+    text-shadow: 1px 1px 1px hsl(324, 50%, 84%);
+    margin-left: 38rem;
 }
 
 .all-product-boxes {
@@ -38,6 +59,8 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     width: 90rem;
+    color: hsl(208, 100%, 97%);
+    text-shadow: 0px 1px 1px hsl(268, 41%, 54%);
 }
 
 .home-page-product-box {
@@ -53,18 +76,21 @@ header {
 }
 
 .indv-product-box {
+    color: hsl(208, 100%, 97%);
+    text-shadow: 1px 1px 1px hsl(268, 41%, 54%);
     background-color: #EBC3DB;
     border: 2px hsl(324, 50%, 83%) solid;
     border-radius: 10px;
     box-shadow: 5px 5px 5px hsl(324, 50%, 83%);
-    margin-top: 13rem;
+    margin-top: 3rem;
     padding: 1rem;
     width: 15rem;
     margin-left: 37rem;
 }
 
-.indv-cake-desc {
-    margin-top: 13rem;
+.indv-cake-script {
+    height: 4rem;
+    line-height: 15pt;
 }
 
 main {
@@ -73,28 +99,51 @@ main {
 
 a:link {
     text-decoration: none;
-    color: hsl(208, 100%, 97%);
+    color: hsl(268, 41%, 54%);
+    text-shadow: 1px 1px 1px hsl(208, 100%, 97%);
 }
 
 a:visited {
     text-decoration: none;
-    color: hsl(208, 100%, 97%);
+    color: hsl(268, 41%, 54%);
 }
 
 a:hover {
     text-decoration: none;
-    color: hsl(208, 100%, 117%);
-    text-shadow: 2px 2px 4px hsl(269, 63%, 34%);
+    color: hsl(268, 41%, 54%);
+    text-shadow: none;
 }
 
-button {
-    font-size: 1rem;
+.add-to-cart-btn {
+    font-size: 0.8rem;
     background-color: hsl(269, 63%, 74%);
     text-decoration: none;
     color: hsl(208, 100%, 97%);
     border: 2px hsl(324, 50%, 83%) solid;
     border-radius: 15px;
-    padding: 0.3rem 0.3rem;
+    padding: 0.4rem 0.4rem;
+    margin-left: 3rem;
+    font-weight: bold;
+}
+
+.add-to-cart-btn:hover {
+    color: #EBC3DB;
+    background-color: hsl(268, 41%, 54%);
+}
+
+.price-and-btn {
+    display: flex;
+    flex-direction: row;
+}
+
+.a-ref-btn {
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.table-column-names {
+    color: hsl(268, 41%, 54%);
+    text-shadow: 1px 1px 1px hsl(208, 100%, 97%);
 }
 
 .order-table {
@@ -102,13 +151,19 @@ button {
     border: 2px hsl(324, 50%, 83%) solid;
     border-radius: 10px;
     box-shadow: 5px 5px 5px hsl(324, 50%, 83%);
-    margin-left: 22rem;
+    margin-left: 21.2rem;
     padding: 2rem;
     font-size: 1.3rem;
     width: 50rem;
     text-align: left;
+    color: hsl(208, 100%, 97%);
+    text-shadow: 0px 1px 1px hsl(268, 41%, 54%);
 }
 
 td {
     padding: 0;
+}
+
+.quantity {
+    padding-left: 2rem;
 }

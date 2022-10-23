@@ -1,11 +1,11 @@
 size,name,price,flavor,frosting,sprinkles,filling
-regular,Apple Pie,3.39,cinnamon-apple cake,cinnamon buttercream,"['Red', 'White', 'Chocolate']",fresh apple filling
-mini,Country Cherry Cheesecake,2.39,graham cracker cake,vanilla buttercream,['country cherry jam'],
-large,Lemon Drop,5.39,lemon cake,lemon buttercream,[],fresh lemon curd
-regular,Chocolate Salted Caramel,3.39,chocolate cake,chocolate buttercream,"['Onyx', 'White', 'Chocolate']",salted caramel filling
-mini,Toasted Coconut,2.39,coconut cake,vanilla buttercream,['shredded toasted coconut'],
-large,Red Velvet,5.39,classic red velvet cake,cream cheese frosting,[],rasperry jam
-regular,Cookies & Cream,3.39,chocolate cake,cookies & cream buttercream,"['Onyx', 'White', 'Chocolate']",chocolate sandwich cookie
-mini,Creme Brulee,2.39,vanilla cake,cream cheese frosting,['burnt sugar crumble'],
-large,Classic Vanilla,5.39,vanilla cake,vanilla buttercream,[],champagne vanilla mousse
-regular,Cinnamon Pumpkin,3.39,pumpkin cake,cinnamon buttercream,"['Orange', 'Green', 'Chocolate']",sweet pumpkin malai
+Regular,Apple Pie,3.39,cinnamon-apple cake,cinnamon buttercream,"['Red', 'White', 'Chocolate']",fresh apple filling
+Mini,Country Cherry Cheesecake,2.39,graham cracker cake,vanilla buttercream,['country cherry jam'],
+Large,Lemon Drop,5.39,lemon cake,lemon buttercream,[],fresh lemon curd
+Regular,Chocolate Salted Caramel,3.39,chocolate cake,chocolate buttercream,"['Onyx', 'White', 'Chocolate']",salted caramel filling
+Mini,Toasted Coconut,2.39,coconut cake,vanilla buttercream,['shredded toasted coconut'],
+Large,Red Velvet,5.39,classic red velvet cake,cream cheese frosting,[],rasperry jam
+Regular,Cookies & Cream,3.39,chocolate cake,cookies & cream buttercream,"['Onyx', 'White', 'Chocolate']",chocolate sandwich cookie
+Mini,Creme Brulee,2.39,vanilla cake,cream cheese frosting,['burnt sugar crumble'],
+Large,Classic Vanilla,5.39,vanilla cake,vanilla buttercream,[],champagne vanilla mousse
+Regular,Cinnamon Pumpkin,3.39,pumpkin cake,cinnamon buttercream,"['Orange', 'Green', 'Chocolate']",sweet pumpkin malai
