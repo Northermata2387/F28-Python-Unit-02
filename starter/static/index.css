@@ -133,12 +133,19 @@ a:hover {
 
 .price-and-btn {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .a-ref-btn {
     padding-top: 1rem;
     padding-left: 1rem;
+}
+
+.size {
+    text-align: center;
+    font-size: 1rem;
+    color: hsl(268, 41%, 54%);
+    text-shadow: 1px 1px 1px hsl(208, 100%, 97%);
 }
 
 .table-column-names {

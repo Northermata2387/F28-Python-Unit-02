@@ -26,7 +26,7 @@
     <main>
         <div class="header-sub-text">
           <h3>Cupcakes Currently Available!</h3>
-          <p>Voted “Best Colorado Cupcakes of 2022” by That News Outlet, cupcakes at Cake It Easy! are made from the freshest ingredients and come in a unique option of flavors</p>
+          <p>Voted “Best Colorado Cupcakes of 2022” by That News Outlet. Cupcakes at Cake It Easy are made from daily fresh ingredients and come in a unique option of flavors</p>
         </div>
         <div class="all-product-boxes">
             {% for cupcake in cupcakes %}
@@ -35,12 +35,15 @@
                         <h3>{{ cupcake["name"] }}</h3>
                     </a>
                     <div class="indv-cake-script">
-                        <h5>A perfectly baked {{ cupcake["flavor"] }} with a light and fluffy {{ cupcake["frosting"] }}</h4>
+                        <h5>A light {{ cupcake["flavor"] }} with a smooth and rich {{ cupcake["frosting"] }}</h4>
                     </div>
                     <div class="price-and-btn">
                       <a class="a-ref-btn" href="{{ url_for('add_cupcake', name=cupcake['name']) }}">
                           <button class="add-to-cart-btn">Add for... $ {{ cupcake["price"] }}</button>
                       </a>
+                      <div>
+                        <h5 class="size">{{ cupcake["size"] }}</h5>
+                      </div>
                     </div>
                 </div>    
             {% endfor %}
