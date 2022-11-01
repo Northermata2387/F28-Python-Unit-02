@@ -15,9 +15,8 @@ def home():
     order_total = round(sum([float(x["price"]) for x in order]), 2)
     return render_template("index.html", cupcakes=cupcakes, items_num=len(order), order_total=order_total)
 
+
 # Endpoint to allow a cupcake to be added to the orders.csv
-
-
 @ app.route("/add-cupcake/<name>")
 def add_cupcake(name):
     cupcake = find_cupcake("cupcakes.csv", name)
@@ -28,9 +27,8 @@ def add_cupcake(name):
     else:
         return "Sorry cupcake not found."
 
+
 # individual cupcakes page @ http://localhost:8000/cupcake_individual
-
-
 @app.route("/individual-cupcake/<name>")
 def individual_cupcake(name):
     cupcake = find_cupcake("cupcakes.csv", name)
@@ -45,8 +43,6 @@ def individual_cupcake(name):
 
 
 # Cart page @ http://localhost:8000/order
-
-
 @app.route("/order")
 def order():
     cupcakes = get_cupcakes("orders.csv")
@@ -67,4 +63,4 @@ def order():
 # Execute code when file runs as Script and application runner
 if __name__ == "__main__":
     app.env = "development"
-    app.run(debug=True, port=8000, host="localhost")
+    app.run(debug=True, port=9542, host="localhost")
